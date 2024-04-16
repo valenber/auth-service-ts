@@ -7,10 +7,24 @@ containeized app.
 
 - authenticate user via third party and issue JWT
 - validate JWT in a request
-- use supabase for auth related logic
+- use supabase as auth provider
 - deploy as a Docker container
 
-## Config guide
+## Endpoints
+
+- POST `/register` - register user with email and password
+
+- POST `/login` - login user and store JWT cookie
+
+- POST `/logout` - logout user and clear JWT cookie
+
+- POST `/authorize` - validate JWT
+
+- GET `/register` - registration UI
+
+- GET `/login` - login UI
+
+## Config guides
 
 https://blog.logrocket.com/how-to-set-up-node-typescript-express/
 
