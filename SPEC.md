@@ -1,9 +1,9 @@
-# Autentication service
+# Authentication service
 
 This app is designed as a portable authentication service to be used in a larger
 containeized app.
 
-## Requrements
+## Requirements
 
 - authenticate user via third party and issue JWT
 - validate JWT in a request
