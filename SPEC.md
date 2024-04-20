@@ -12,14 +12,14 @@ containeized app.
 
 ## Endpoints
 
-- POST `/register` - register user with email and password
+- GET `/login` - login UI
 
 - POST `/login` - login user and store JWT cookie
 
 - POST `/logout` - logout user and clear JWT cookie
 
-- POST `/authorize` - validate JWT
-
 - GET `/register` - registration UI
 
-- GET `/login` - login UI
+- POST `/register` - register user with email and password
+
+- POST `/authorize` - validate JWT
