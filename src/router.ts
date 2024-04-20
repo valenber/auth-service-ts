@@ -2,7 +2,7 @@ import express, { Express } from 'express';
 import { AuthRepository } from 'repositories/auth';
 
 function createRouter(authRepository: AuthRepository): Express {
-  console.log('authRepository', authRepository);
+  console.log('authRepository', typeof authRepository);
 
   const router = express();
   router.use(express.static('src/ui'));

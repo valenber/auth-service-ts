@@ -1,9 +1,12 @@
 import request from 'supertest';
 import { createRouter } from './router';
-import { authRepository } from './repositories/auth';
+import { createAuthStore } from './store/auth';
+import { createAuthRepository } from './repositories/auth';
 
 jest.mock('./repositories/auth');
 
+const store = createAuthStore();
+const authRepository = createAuthRepository(store);
 const router = createRouter(authRepository);
 
 describe('GET /', () => {
