@@ -1,6 +1,6 @@
 import express, { Express, Response } from 'express';
 
-function createServer(): Express {
+function createApp(): Express {
   const server: Express = express();
 
   server.get('/', (_, res: Response) => {
@@ -10,4 +10,4 @@ function createServer(): Express {
   return server;
 }
 
-export { createServer };
+export { createApp };

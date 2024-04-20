@@ -1,10 +1,10 @@
-import { createServer } from './app';
+import { createApp } from './app';
 import { appConfig } from 'config';
 
 const { port } = appConfig;
 
-const server = createServer();
+const app = createApp();
 
-server.listen(port, () => {
+app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
