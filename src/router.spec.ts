@@ -1,11 +1,11 @@
 import request from 'supertest';
-import { createApp } from './app';
+import { createRouter } from './router';
 
-const app = createApp();
+const router = createRouter();
 
 describe('GET /', () => {
   it('returns 404 on unhandled root', async () => {
-    const res = await request(app).get('/abyrvalg');
+    const res = await request(router).get('/abyrvalg');
 
     expect(res.status).toBe(404);
   });

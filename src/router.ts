@@ -1,6 +1,6 @@
 import express, { Express } from 'express';
 
-function createApp(): Express {
+function createRouter(): Express {
   const server: Express = express();
   server.use(express.static('src/ui'));
 
@@ -11,4 +11,4 @@ function createApp(): Express {
   return server;
 }
 
-export { createApp };
+export { createRouter };

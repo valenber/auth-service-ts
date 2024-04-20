@@ -1,10 +1,12 @@
-import { createApp } from './app';
+import { createRouter } from './router';
 import { appConfig } from 'config';
 
 const { port } = appConfig;
 
-const app = createApp();
+// Router <-- Services <-- DataRepositories
 
-app.listen(port, () => {
+const router = createRouter();
+
+router.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });

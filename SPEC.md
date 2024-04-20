@@ -16,10 +16,10 @@ containeized app.
 
 - POST `/login` - login user and store JWT cookie
 
-- POST `/logout` - logout user and clear JWT cookie
-
 - GET `/register` - registration UI
 
 - POST `/register` - register user with email and password
+
+- POST `/logout` - logout user and clear JWT cookie
 
 - POST `/authorize` - validate JWT
