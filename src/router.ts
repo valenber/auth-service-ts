@@ -1,15 +1,15 @@
 import express, { Express } from 'express';
 import { AuthRepository } from 'repositories/auth';
+import { createLoginService } from 'services/login';
 
+/** Connects the services to the app */
 function createRouter(authRepository: AuthRepository): Express {
   console.log('authRepository', typeof authRepository);
 
   const router = express();
-  router.use(express.static('src/ui'));
 
-  router.get('/login', function (_, res) {
-    res.sendFile('src/ui/login.html', { root: '.' });
-  });
+  const loginService = createLoginService(authRepository);
+  loginService.registerRoutes(router);
 
   return router;
 }

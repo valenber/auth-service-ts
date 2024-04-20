@@ -3,8 +3,6 @@ import { createRouter } from './router';
 import { createAuthStore } from './store/auth';
 import { createAuthRepository } from './repositories/auth';
 
-jest.mock('./repositories/auth');
-
 const store = createAuthStore();
 const authRepository = createAuthRepository(store);
 const router = createRouter(authRepository);
