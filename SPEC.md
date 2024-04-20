@@ -23,7 +23,3 @@ containeized app.
 - GET `/register` - registration UI
 
 - GET `/login` - login UI
-
-## Dev Notes
-
-- [x] see if we can get rid of dotenv package in favour of new Node functionality

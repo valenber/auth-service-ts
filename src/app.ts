@@ -1,9 +1,13 @@
 import express, { Express, Response } from 'express';
 
-const api: Express = express();
+function createServer(): Express {
+  const server: Express = express();
 
-api.get('/', (_, res: Response) => {
-  res.send('Express is running!');
-});
+  server.get('/', (_, res: Response) => {
+    res.send('Express is running!');
+  });
 
-export { api };
+  return server;
+}
+
+export { createServer };

@@ -1,12 +1,10 @@
-import { api } from './app';
+import { createServer } from './app';
 import { appConfig } from 'config';
 
 const { port } = appConfig;
 
-function init() {
-  api.listen(port, () => {
-    console.log(`[server]: Server is running at http://localhost:${port}`);
-  });
-}
+const server = createServer();
 
-init();
+server.listen(port, () => {
+  console.log(`[server]: Server is running at http://localhost:${port}`);
+});
