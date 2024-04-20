@@ -1,7 +1,6 @@
 {
   "name": "auth-service-ts",
   "version": "1.0.0",
-  "description": "",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -13,7 +12,6 @@
     "format": "eslint src/**/*.ts --fix",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": [],
   "author": "Valentin Berlin <valentin.berlin@pm.com>",
   "license": "ISC",
   "dependencies": {
