@@ -1,10 +1,10 @@
-import express, { Express, Response } from 'express';
+import express, { Express } from 'express';
 
 function createApp(): Express {
   const server: Express = express();
   server.use(express.static('src/ui'));
 
-  server.get('/login', function (_, res: Response) {
+  server.get('/login', function (_, res) {
     res.sendFile('src/ui/login.html', { root: '.' });
   });
 
