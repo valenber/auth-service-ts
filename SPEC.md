@@ -24,10 +24,6 @@ containeized app.
 
 - GET `/login` - login UI
 
-## Config guides
-
-https://blog.logrocket.com/how-to-set-up-node-typescript-express/
-
 ## Dev Notes
 
-- see if we can get rid of dotenv package in favour of new Node functionality
+- [x] see if we can get rid of dotenv package in favour of new Node functionality

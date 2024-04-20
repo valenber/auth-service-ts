@@ -1,9 +1,7 @@
-import dotenv from 'dotenv';
 import { api } from './app';
+import { appConfig } from 'config';
 
-dotenv.config();
-
-const port = process.env.PORT || 3000;
+const { port } = appConfig;
 
 function init() {
   api.listen(port, () => {
