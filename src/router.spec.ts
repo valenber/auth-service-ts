@@ -1,7 +1,10 @@
 import request from 'supertest';
 import { createRouter } from './router';
+import { authRepository } from './repositories/auth';
 
-const router = createRouter();
+jest.mock('./repositories/auth');
+
+const router = createRouter(authRepository);
 
 describe('GET /', () => {
   it('returns 404 on unhandled root', async () => {
